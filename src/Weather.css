@@ -2,15 +2,15 @@
   border: 1px solid black;
   color: rgb (135, 135, 135);
   color: #878787;
-  padding: 16px;
-  margin: 30px auto;
+  padding: 28px;
+  margin: 40px auto;
   border-radius: 4px;
 }
 
 .Weather h1 {
   font-size: 24px;
   font-weight: 100;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0;
   line-height: 29px;
 }
 
@@ -26,9 +26,7 @@
   list-style: none;
 }
 
-.Weather img {
-  height: 64px;
-  width: 64px;
+.Weather canvas {
   margin-right: 10px;
   display: inline-block;
 }
