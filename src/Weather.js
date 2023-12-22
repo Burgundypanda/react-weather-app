@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./Weatherinfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -10,6 +11,7 @@ export default function Weather(props) {
     console.log(response.data.main);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -59,6 +61,25 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
+        <footer>
+          This project is created by Jakiya Rahman and is{" "}
+          <a
+            href="https://github.com/Burgundypanda/react-weather-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://app.netlify.com/teams/burgundypanda/overview"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
+          </a>
+        </footer>
       </div>
     );
   } else {
