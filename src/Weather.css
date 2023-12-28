@@ -21,11 +21,6 @@
   color: #272142;
 }
 
-.WeatherInfo .temperature-container {
-  align-items: center;
-  margin-top: 30px;
-}
-
 .Weather ul {
   margin: 0;
   padding: 0;
